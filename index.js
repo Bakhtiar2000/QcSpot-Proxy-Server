@@ -47,4 +47,7 @@ app.get("/api/qc-photos/:id", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5002;
+app.get("/", (req, res) => {
+  res.send(`Proxy Server is running on port ${PORT}`);
+});
 app.listen(PORT, () => console.log(`Proxy server running on port ${PORT}`));
